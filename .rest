@@ -1,2 +1,35 @@
+### LOCALHOST
+GET http://localhost:8080/movie/ HTTP/1.1
+
 ###
-GET http://localhost:8080/ HTTP/1.1
+GET http://localhost:8080/movie/63d975fb122f863732dea6e1 HTTP/1.1
+
+###
+POST http://localhost:8080/movie/  HTTP/1.1
+content-type: application/json
+
+{
+    "movie_id": "2",
+    "title": "Star Wars: Empire Strikes Back",
+    "rating": "PG",
+    "plot": "The Empire is on the hunt for Luke Skywalker and the Rebel Alliance",
+    "length": "2 Hours and 8 minutes"
+}
+
+### RENDER REQUESTS 
+GET https://downsrecipes.onrender.com/movie/ HTTP/1.1
+
+###
+GET https://downsrecipes.onrender.com/movie/63d975fb122f863732dea6e1 HTTP/1.1
+
+###
+POST https://downsrecipes.onrender.com/movie/  HTTP/1.1
+content-type: application/json
+
+{
+    "movie_id": "3",
+    "title": "Indiana Jones: Raiders of the Lost Ark",
+    "rating": "PG",
+    "plot": "Indiana Jones is on th esearch for the lost ark.",
+    "length": "2 Hours and 8 minutes"
+}
