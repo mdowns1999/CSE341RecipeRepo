@@ -1,0 +1,25 @@
+{
+  "name": "cse341reciperepo",
+  "version": "1.0.0",
+  "description": "A Simple API that has kitchen recipes",
+  "main": "source.js",
+  "scripts": {
+    "start": "node source.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdowns1999/CSE341RecipeRepo.git"
+  },
+  "author": "Mike Downs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdowns1999/CSE341RecipeRepo/issues"
+  },
+  "homepage": "https://github.com/mdowns1999/CSE341RecipeRepo#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0"
+  }
+}
