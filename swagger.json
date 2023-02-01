@@ -5,10 +5,10 @@
     "description": "An API to show various movies.",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "downsrecipes.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/movie": {
