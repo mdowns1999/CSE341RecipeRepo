@@ -1,6 +1,9 @@
 ### LOCALHOST
 GET http://localhost:8080/movie/ HTTP/1.1
 
+### ROUTE DOES NOT EXIST
+GET http://localhost:8080/fail HTTP/1.1
+
 ###
 GET http://localhost:8080/movie/63d975fb122f863732dea6e1 HTTP/1.1
 
@@ -9,13 +12,27 @@ POST http://localhost:8080/movie/  HTTP/1.1
 content-type: application/json
 
 {
-    "movie_id": "2",
-    "title": "Star Wars: Empire Strikes Back",
+    "movie_id": "hhhhhhhhhhhh",
+    "title": "Star Wars: Attack of the Clones",
     "rating": "PG",
-    "plot": "The Empire is on the hunt for Luke Skywalker and the Rebel Alliance",
+    "plot": "A war is brewing in the Galaxy",
     "length": "2 Hours and 8 minutes"
 }
 
+###
+DELETE http://localhost:8080/movie/63e27dc227ba060a16a65419 HTTP/1.1
+
+###
+PUT http://localhost:8080/movie/63e27dc227ba060a16a65419  HTTP/1.1
+content-type: application/json
+
+{
+    "movie_id": "11",
+    "title": "Star Wars: Attack of the Clones",
+    "rating": "PG",
+    "plot": "A war is brewing in the Galaxy",
+    "length": "2 Hours and 8 minutes"
+}
 ### RENDER REQUESTS 
 GET https://downsrecipes.onrender.com/movie/ HTTP/1.1
 
