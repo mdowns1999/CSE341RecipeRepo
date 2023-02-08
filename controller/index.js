@@ -7,15 +7,21 @@ const name = async(req, res) => {
 }
 
 const getAllMovies = async(req, res) =>{
+  try{
     const result = await mongodb.getDb().db('movies').collection('movie').find();
 
     result.toArray().then((lists) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists);
     });
+  }
+    catch(err){
+      res.status(400).json(err.message);
+  }
 };
 
 const getMovieByID = async(req, res) => {
+  try{
     const movieIdString = req.params.id;
     const result = await mongodb.getDb()
     .db('movies')
@@ -26,6 +32,10 @@ const getMovieByID = async(req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(lists);
     })
+  }
+  catch(err){
+    res.status(400).json(err.message);
+}
 }
 
 const postNewMovie = async(req, res) => {
