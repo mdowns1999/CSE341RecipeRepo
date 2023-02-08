@@ -47,7 +47,10 @@ const postNewMovie = async(req, res) => {
       //check(movie.plot, "Please enter a Movie plot").not().isEmpty();
       //check(movie.length, "Please enter a Movie length").not().isEmpty();
     
-      const result = await mongodb.getDb().db('movies').collection('movie').insertOne(movie);
+      const result = await mongodb.getDb()
+      .db('movies')
+      .collection('movie')
+      .insertOne(movie);
       //const result = await mongodb.getDb().db('movies').collection('movie').find();
 
       if (result.acknowledged) {
@@ -78,7 +81,7 @@ const deleteMovie = async (req, res) => {
   
     if (result.deletedCount > 0) {
       res.status(204).send();
-      console.log('The contact was successfully deleted!');
+      console.log('The info was successfully deleted!');
     } else {
       res.status(404).json('The Delete has failed.');
     }
@@ -96,13 +99,13 @@ const deleteMovie = async (req, res) => {
 
   const result = await mongodb
     .getDb()
-    .db('contactInfo')
-    .collection('contacts')
+    .db('movies')
+    .collection('movie')
     .updateOne({ _id: userIdString }, { $set: movie });
 
   if (result.acknowledged) {
     res.status(204).send();
-    console.log('The contact was successfully updated!');
+    console.log('The info was successfully updated!');
   } else {
     res.status(404).json('The Update has failed.');
   }
