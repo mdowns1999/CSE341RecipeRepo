@@ -9,26 +9,27 @@ POST http://localhost:8080/movie/  HTTP/1.1
 content-type: application/json
 
 {
-    "movie_id": "hhhhhhhhhhhh",
-    "title": "Star Wars: Attack of the Clones",
+    "movie_id": "",
+    "title": "Star Wars",
     "rating": "PG",
-    "plot": "A war is brewing in the Galaxy",
-    "length": "2 Hours and 8 minutes"
+    "plot": "A war",
+    "length": "2 Hours"
 }
 
-###
-DELETE http://localhost:8080/movie/63e27dc227ba060a16a65419 HTTP/1.1
 
 ###
-PUT http://localhost:8080/movie/63e3faee1ebd416f2d8f9aa3  HTTP/1.1
+DELETE http://localhost:8080/movie/63e4060ef997877c5469d708 HTTP/1.1
+
+###
+PUT http://localhost:8080/movie/63e3fdb9858ea7e9852d433a  HTTP/1.1
 content-type: application/json
 
 {
-    "movie_id": "11",
-    "title": "Star Wars: Attack of the Clones",
+    "movie_id": "12",
+    "title": "Star Wars: Revenger of the Sith",
     "rating": "PG",
-    "plot": "A war is brewing in the Galaxy",
-    "length": "2 Hours and 8 minutes"
+    "plot": "The Dark Side seeks to control the galaxy",
+    "length": "2 Hours and 4 minutes"
 }
 
 
