@@ -50,6 +50,7 @@ const postNewMovie = async (req, res) => {
     const response = valid.validateMovie(movie);
     if (response.error) {
       res.status(422).json(response.error.message);
+      return;
     }
 
     const result = await mongodb
@@ -102,6 +103,7 @@ const updateMovie = async (req, res) => {
     const response = valid.validateMovie(movie);
     if (response.error) {
       res.status(422).json(response.error.message);
+      return;
     }
 
     const result = await mongodb
