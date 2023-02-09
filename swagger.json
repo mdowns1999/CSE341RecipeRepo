@@ -8,12 +8,12 @@
   "host": "downsrecipes.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/movie/": {
       "get": {
-        "description": "",
+        "description": "Get all the movies from the database.",
         "produces": [
           "application/json"
         ],
@@ -28,7 +28,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a movie and post it into the database.",
         "parameters": [
           {
             "name": "body",
@@ -70,7 +70,7 @@
     },
     "/movie/{id}": {
       "get": {
-        "description": "",
+        "description": "Get one movie from the database by ID.",
         "produces": [
           "application/json"
         ],
@@ -92,7 +92,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete a movie from the database by ID.",
         "parameters": [
           {
             "name": "id",
@@ -111,7 +111,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Update a movie from the database by ID.",
         "parameters": [
           {
             "name": "id",
