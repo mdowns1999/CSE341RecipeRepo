@@ -1,11 +1,28 @@
 const router = require('express').Router();
+const { auth, requiresAuth } = require('express-openid-connect');
+
+// const config = {
+//     authRequired: false,
+//     auth0Logout: true,
+//     secret: 'a long, randomly-generated string stored in env',
+//     baseURL: 'http://localhost:8080',
+//     clientID: 'uXyuYIWzBKhaWKRWLcS5qK6lMVn5UYeD',
+//     issuerBaseURL: 'https://dev-5sjvxvs7q7lwekt2.us.auth0.com'
+//   };
 
 
+// router.use(auth(config));
+  
+// req.isAuthenticated is provided from the auth router
+// router.get('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
 
-const controller = require('../controller/index');
-// router.get('/movie', controller.getAllMovies);
-// router.get('/movie/:id', controller.getMovieByID);
-// router.post('/movie', controller.postNewMovie);
+// router.get('/profile', requiresAuth(), (req, res) => {
+//   res.send(JSON.stringify(req.oidc.user));
+// });
+
+
 router.use('/movie', require('./movie'));
 
 router.use('/', require('./swagger'));

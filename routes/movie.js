@@ -1,6 +1,5 @@
 const routes = require('express').Router();
 const controller = require('../controller/index');
-const { check } = require('express-validator');
 
 
 routes.get('/', controller.getAllMovies);

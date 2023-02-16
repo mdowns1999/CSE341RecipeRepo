@@ -25,7 +25,7 @@ const getMovieByID = async (req, res) => {
     const result = await mongodb
       .getDb()
       .db("movies")
-      .collection("movie")
+      .collection()
       .find({ _id: ObjectId(movieIdString) });
 
     result.toArray().then((lists) => {
