@@ -18,7 +18,8 @@ const getAllMovies = async (req, res) => {
     res.status(400).json(err.message);
   }
 };
-
+//_id: ObjectId(movieIdString)
+//ObjectID.createFromHexString(
 const getMovieByID = async (req, res) => {
   try {
     const movieIdString = req.params.id;
@@ -26,7 +27,7 @@ const getMovieByID = async (req, res) => {
       .getDb()
       .db("movies")
       .collection()
-      .find({ _id: ObjectId(movieIdString) });
+      .find({ _id:ObjectID.createFromHexString(movieIdString)});
 
     result.toArray().then((lists) => {
       res.setHeader("Content-Type", "application/json");

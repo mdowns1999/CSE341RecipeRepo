@@ -1,5 +1,5 @@
 ### LOCALHOST
-GET http://localhost:8080/movie/ HTTP/1.1
+GET http://localhost:8080/login HTTP/1.1
 
 ###
 GET http://localhost:8080/movie/63d975fb122f863732dea6e1 HTTP/1.1
@@ -18,7 +18,7 @@ content-type: application/json
 
 
 ###
-DELETE http://localhost:8080/movie/63e4060ef997877c5469d708 HTTP/1.1
+DELETE http://localhost:8080/movie/63e401db5c8e094dea72d029 HTTP/1.1
 
 ###
 PUT http://localhost:8080/movie/63e3fdb9858ea7e9852d433a  HTTP/1.1
