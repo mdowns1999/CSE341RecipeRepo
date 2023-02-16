@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { auth, requiresAuth } = require('express-openid-connect');
+// const { auth, requiresAuth } = require('express-openid-connect');
 
 // const config = {
 //     authRequired: false,
@@ -10,17 +10,6 @@ const { auth, requiresAuth } = require('express-openid-connect');
 //     issuerBaseURL: 'https://dev-5sjvxvs7q7lwekt2.us.auth0.com'
 //   };
 
-
-// router.use(auth(config));
-  
-// req.isAuthenticated is provided from the auth router
-// router.get('/', (req, res) => {
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
-
-// router.get('/profile', requiresAuth(), (req, res) => {
-//   res.send(JSON.stringify(req.oidc.user));
-// });
 
 
 router.use('/movie', require('./movie'));
