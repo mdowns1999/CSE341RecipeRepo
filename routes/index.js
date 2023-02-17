@@ -1,20 +1,6 @@
 const router = require('express').Router();
 const { requiresAuth } = require('express-openid-connect');
 
-
-//   const config = {
-//     authRequired: false,
-//     auth0Logout: true,
-//     secret: 'a long, randomly-generated string stored in env',
-//     baseURL: 'http://localhost:8080',
-//     clientID: 'uXyuYIWzBKhaWKRWLcS5qK6lMVn5UYeD',
-//     issuerBaseURL: 'https://dev-5sjvxvs7q7lwekt2.us.auth0.com'
-//   };
-  
-//   //auth router attaches /login, /logout, and /callback routes to the baseURL
-//   router.use(auth(config));
-  
- //req.isAuthenticated is provided from the auth router
   router.get('/', (req, res) => {
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
   });
@@ -22,8 +8,6 @@ const { requiresAuth } = require('express-openid-connect');
   router.get('/profile', requiresAuth(), (req, res) => {
     res.send(JSON.stringify(req.oidc.user));
   });
-
-
 
 router.use('/movie', require('./movie'));
 
