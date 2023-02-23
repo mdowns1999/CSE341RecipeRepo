@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Contacts",
+    "description": "Movies",
     "version": "1.0.0"
   },
   "host": "downsrecipes.onrender.com",
@@ -11,9 +11,31 @@
     "https"
   ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/profile": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/movie/": {
       "get": {
-        "description": "Get all the movies from the database.",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -28,7 +50,7 @@
         }
       },
       "post": {
-        "description": "Create a movie and post it into the database.",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -70,7 +92,7 @@
     },
     "/movie/{id}": {
       "get": {
-        "description": "Get one movie from the database by ID.",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -92,7 +114,7 @@
         }
       },
       "delete": {
-        "description": "Delete a movie from the database by ID.",
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -111,7 +133,7 @@
         }
       },
       "put": {
-        "description": "Update a movie from the database by ID.",
+        "description": "",
         "parameters": [
           {
             "name": "id",

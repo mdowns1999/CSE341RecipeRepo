@@ -1,5 +1,7 @@
 ### LOCALHOST
 GET http://localhost:8080/movie/ HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Il9xakpwX3VxTDJQanZfT29YWTRiWSJ9.eyJuaWNrbmFtZSI6Im1pY2hhZWxqZG93bnM5OSIsIm5hbWUiOiJtaWNoYWVsamRvd25zOTlAZ21haWwuY29tIiwicGljdHVyZSI6Imh0dHBzOi8vcy5ncmF2YXRhci5jb20vYXZhdGFyLzRkZDVlYmUwMDlmM2NkNjU0ZTAzYmUwNDQ3YzY5ZTQ0P3M9NDgwJnI9cGcmZD1odHRwcyUzQSUyRiUyRmNkbi5hdXRoMC5jb20lMkZhdmF0YXJzJTJGbWkucG5nIiwidXBkYXRlZF9hdCI6IjIwMjMtMDItMjNUMTU6NTQ6NTMuMDMxWiIsImVtYWlsIjoibWljaGFlbGpkb3duczk5QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6Ly9kZXYtNXNqdnh2czdxN2x3ZWt0Mi51cy5hdXRoMC5jb20vIiwiYXVkIjoiSm1VV2tncmNZMFRFdkNEa2xNNkNhdjZlSEVvZHE0SlUiLCJpYXQiOjE2NzcxNjc3MDIsImV4cCI6MTY3NzIwMzcwMiwic3ViIjoiYXV0aDB8NjNlYmFkNTBkMDIxYmQxM2ZmOTI3NGFmIiwic2lkIjoiaXkwVm9FaUNoVWl4QTFfajdSMGRnUGsxUnduV1h1UjEiLCJub25jZSI6IlpsMjd6bHptdGVFWkNDbWtlMEdoUFNwRWVSSFF1YnVTUnNRdm5mTWZPSFkifQ.bTIWjTc2T69VZRA39La7RLnpsR6Z2453DNj3nHjE0_1luG1gsvSxAqu3bVHCDtMZCFCwzE9kXPHOiOxzKBFwrUhSNVkJc18mdROknOoHL-GTKTV5yGTYZYuEAhJLqBTqq6gASCCCB737E4HfPt3CiF4tATehd-_q5PalXRp7TU_sFisB1QqB-r6afPwfkrQ75wsMJvSyDh2MEQERHmivcNvUpX92Lcd5LM43u0FVM9M8KQJroO1OdZ-SI0VYbyIvkzHVgwt_2BwmkObqItpu-j5_C0Q7XqKxA2-giyC9HXbC025ySEgJw8zMaLF7sUJP0dBPIqoP0ZvVVghC_rXUog
 
 ###
 GET http://localhost:8080/movie/63d975fb122f863732dea6e1 HTTP/1.1
@@ -9,11 +11,12 @@ GET http://localhost:8080/movie/63d975fb122f863732dea6e1 HTTP/1.1
 POST http://localhost:8080/movie/  HTTP/1.1
 content-type: application/json
 
+
 {
-    "movie_id": "",
+    "movie_id": "22",
     "title": "Star Wars",
     "rating": "PG",
-    "plot": "A war",
+    "plot": "A war is now starting to rage through the galaxy.",
     "length": "2 Hours"
 }
 
