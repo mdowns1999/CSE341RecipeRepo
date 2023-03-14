@@ -5,7 +5,7 @@
   "main": "source.js",
   "scripts": {
     "start": "node source.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "swagger-autogen": "node ./swagger.js"
   },
   "repository": {
@@ -32,6 +32,8 @@
     "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3",
     "swagger-autogen": "^2.23.0"
   }
 }

@@ -2,6 +2,10 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 const valid = require("../helper");
 
+const index = async(req, res) => {
+  
+  res.send('hello world!');
+}
 
 const getAllMovies = async (req, res) => {
   try {
@@ -131,4 +135,5 @@ module.exports = {
   postNewMovie,
   deleteMovie,
   updateMovie,
+  index
 };

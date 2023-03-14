@@ -9,9 +9,11 @@ const { requiresAuth } = require('express-openid-connect');
   router.get('/profile', requiresAuth(), (req, res) => {
     res.send(JSON.stringify(req.oidc.user));
   });
+//router.use('/test', require('./test'));
 
   //Normal Routes
 router.use('/movie', require('./movie'));
+//router.use('/test', require('./hello'));
 
 router.use('/', require('./swagger'));
 
