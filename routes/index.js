@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const { requiresAuth } = require('express-openid-connect');
+//const { requiresAuth } = require('express-openid-connect');
 
 //AUTHO test routes
-  router.get('/', (req, res) => {
-    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-  });
+  // router.get('/', (req, res) => {
+  //   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+  // });
 
-  router.get('/profile', requiresAuth(), (req, res) => {
-    res.send(JSON.stringify(req.oidc.user));
-  });
+  // router.get('/profile', requiresAuth(), (req, res) => {
+  //   res.send(JSON.stringify(req.oidc.user));
+  // });
 //router.use('/test', require('./test'));
 
   //Normal Routes

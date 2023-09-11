@@ -6,16 +6,16 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 8080;
+// const port = process.env.PORT || 8080;
 
-const config = {
-  authRequired: false,
-  auth0Logout: true,
-  secret: process.env.SECRET,
-  baseURL: process.env.BASEURL,
-  clientID: process.env.CLIENTID,
-  issuerBaseURL: process.env.ISSUERBASEURL
-};
+// const config = {
+//   authRequired: false,
+//   auth0Logout: true,
+//   secret: process.env.SECRET,
+//   baseURL: process.env.BASEURL,
+//   clientID: process.env.CLIENTID,
+//   issuerBaseURL: process.env.ISSUERBASEURL
+// };
 
 app
   .use(bodyParser.json())
@@ -25,7 +25,7 @@ app
   })
   
   //auth router attaches /login, /logout, and /callback routes to the baseURL
-  .use(auth(config))
+  //.use(auth(config))
   .use("/", require("./routes"));
   
   module.exports = app;
