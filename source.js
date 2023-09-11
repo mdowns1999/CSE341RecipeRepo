@@ -17,15 +17,6 @@ const config = {
   issuerBaseURL: process.env.ISSUERBASEURL
 };
 
-// const config = {
-//   authRequired: false,
-//   auth0Logout: true,
-//   secret: 'a long, randomly-generated string stored in env',
-//   baseURL: 'http://localhost:8080',
-//   clientID: 'JmUWkgrcY0TEvCDklM6Cav6eHEodq4JU',
-//   issuerBaseURL: 'https://dev-5sjvxvs7q7lwekt2.us.auth0.com'
-// };
-
 app
   .use(bodyParser.json())
   .use((req, res, next) => {
@@ -36,12 +27,14 @@ app
   //auth router attaches /login, /logout, and /callback routes to the baseURL
   .use(auth(config))
   .use("/", require("./routes"));
+  
+  module.exports = app;
 
-mongodb.initDb((err, mongodb, next) => {
-  if (err) {
-    console.log(err);
-  } else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
-  }
-});
+// mongodb.initDb((err, mongodb, next) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     app.listen(port);
+//     console.log(`Connected to DB and listening on ${port}`);
+//   }
+// });

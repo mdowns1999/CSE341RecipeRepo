@@ -4,7 +4,7 @@
   "description": "A Simple API that has kitchen recipes",
   "main": "source.js",
   "scripts": {
-    "start": "node source.js",
+    "start": "node server.js",
     "test": "jest",
     "swagger-autogen": "node ./swagger.js"
   },
@@ -29,6 +29,7 @@
     "joi": "^17.7.0",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^4.13.0",
+    "mongoose": "^7.0.2",
     "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
